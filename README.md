@@ -108,6 +108,11 @@ Finally, run `npm run seed` to populate some data.
 
 And you're done!
 
+### Step 4. Start DB service
+```
+brew services start postgresql@14
+```
+
 ## Notes about this app
 
 The demo is a note-taking app called **React Notes**. It consists of a few major parts:
