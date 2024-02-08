@@ -6,7 +6,7 @@
  *
  */
 
-import {db} from './db';
+import {searchNotes} from './db';
 import SidebarNote from './SidebarNote';
 
 export default async function NoteList({searchText}) {
@@ -15,12 +15,7 @@ export default async function NoteList({searchText}) {
   // WARNING: This is for demo purposes only.
   // We don't encourage this in real apps. There are far safer ways to access
   // data in a real application!
-  const notes = (
-    await db.query(
-      `select * from notes where title ilike $1 order by id desc`,
-      ['%' + searchText + '%']
-    )
-  ).rows;
+  const notes = searchNotes(searchText);
 
   // Now let's see how the Suspense boundary above lets us not block on this.
   // await fetch('http://localhost:4000/sleep/3000');
