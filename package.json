@@ -22,7 +22,6 @@
     "html-webpack-plugin": "5.5.0",
     "marked": "^4.2.12",
     "nodemon": "^2.0.21",
-    "pg": "^8.10.0",
     "react": "^18.3.0-canary-1219d57fc-20240201",
     "react-dom": "^18.3.0-canary-1219d57fc-20240201",
     "react-error-boundary": "^3.1.4",
