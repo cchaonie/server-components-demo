@@ -6,7 +6,7 @@
  *
  */
 
-import {marked} from 'marked';
+import { marked } from 'marked';
 import sanitizeHtml from 'sanitize-html';
 
 const allowedTags = sanitizeHtml.defaults.allowedTags.concat([
@@ -23,7 +23,7 @@ const allowedAttributes = Object.assign(
   }
 );
 
-export default function TextWithMarkdown({text}) {
+export default function TextWithMarkdown({ text }) {
   return (
     <div
       className="text-with-markdown"

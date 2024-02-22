@@ -9,7 +9,7 @@
 // Error early if this is accidentally imported on the client.
 import 'server-only';
 
-import {startOfYear} from 'date-fns';
+import { startOfYear } from 'date-fns';
 
 const now = new Date();
 const startOfThisYear = startOfYear(now);
@@ -59,7 +59,7 @@ let nextId = db.length;
 
 export function insertNote(title, body) {
   const now = new Date();
-  const note = {id: nextId++, title, body, created_at: now, updated_at: now};
+  const note = { id: nextId++, title, body, created_at: now, updated_at: now };
   db.push(note);
   return note;
 }

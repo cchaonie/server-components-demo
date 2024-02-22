@@ -39,7 +39,7 @@ webpack(
         inject: true,
         template: path.resolve(__dirname, '../public/index.html'),
       }),
-      new ReactServerWebpackPlugin({isServer: false}),
+      new ReactServerWebpackPlugin({ isServer: false }),
     ],
   },
   (err, stats) => {

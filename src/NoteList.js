@@ -6,10 +6,10 @@
  *
  */
 
-import {searchNotes} from './db';
+import { searchNotes } from './db';
 import SidebarNote from './SidebarNote';
 
-export default async function NoteList({searchText}) {
+export default async function NoteList({ searchText }) {
   // const notes = await (await fetch('http://localhost:4000/notes')).json();
 
   // WARNING: This is for demo purposes only.

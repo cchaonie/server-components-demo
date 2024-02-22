@@ -14,20 +14,20 @@ const babelRegister = require('@babel/register');
 
 babelRegister({
   ignore: [/[\\\/](build|server|node_modules)[\\\/]/],
-  presets: [['@babel/preset-react', {runtime: 'automatic'}]],
+  presets: [['@babel/preset-react', { runtime: 'automatic' }]],
   plugins: ['@babel/transform-modules-commonjs'],
 });
 
 const express = require('express');
 const compress = require('compression');
-const {readFileSync} = require('fs');
-const {unlink, writeFile} = require('fs').promises;
-const {renderToPipeableStream} = require('react-server-dom-webpack/server');
+const { readFileSync } = require('fs');
+const { unlink, writeFile } = require('fs').promises;
+const { renderToPipeableStream } = require('react-server-dom-webpack/server');
 const path = require('path');
 const React = require('react');
 const ReactApp = require('../src/App').default;
 
-const {db, findNote, insertNote, editNote, deleteNote} = require('../src/db');
+const { db, findNote, insertNote, editNote, deleteNote } = require('../src/db');
 
 const PORT = process.env.PORT || 4000;
 const app = express();
@@ -91,7 +91,7 @@ async function renderReactTree(res, props) {
     'utf8'
   );
   const moduleMap = JSON.parse(manifest);
-  const {pipe} = renderToPipeableStream(
+  const { pipe } = renderToPipeableStream(
     React.createElement(ReactApp, props),
     moduleMap
   );
@@ -174,7 +174,7 @@ app.get(
 
 app.get('/sleep/:ms', function(req, res) {
   setTimeout(() => {
-    res.json({ok: true});
+    res.json({ ok: true });
   }, req.params.ms);
 });
 

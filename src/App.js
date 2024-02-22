@@ -6,7 +6,7 @@
  *
  */
 
-import {Suspense} from 'react';
+import { Suspense } from 'react';
 
 import Note from './Note';
 import NoteList from './NoteList';
@@ -15,7 +15,7 @@ import SearchField from './SearchField';
 import NoteSkeleton from './NoteSkeleton';
 import NoteListSkeleton from './NoteListSkeleton';
 
-export default function App({selectedId, isEditing, searchText}) {
+export default function App({ selectedId, isEditing, searchText }) {
   return (
     <div className="main">
       <section className="col sidebar">
