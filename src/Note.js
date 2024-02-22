@@ -39,9 +39,6 @@ export default async function Note({selectedId, isEditing}) {
   let {id, title, body, updated_at} = note;
   const updatedAt = new Date(updated_at);
 
-  // We could also read from a file instead.
-  // body = await readFile(resolve(`./notes/${note.id}.md`), 'utf8');
-
   // Now let's see how the Suspense boundary above lets us not block on this.
   // await fetch('http://localhost:4000/sleep/3000');
 
